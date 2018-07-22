@@ -1,5 +1,9 @@
 # SampleProblems
-These are just a random set problem descriptions and my solutions to them.<br />
+These are just a random set problem descriptions and my solutions to them.
+<br />
+<br />
+Eventually I will have folders for depending on what I feel the test displays skills on. ex. array based, 2d array based, string, int <br />
+
 <br />
 Test1:<br />
 Given an array of integers, calculate the fractions of its elements that are positive, negative, and are zeros. Print the decimal value of each fraction on a new line.
