@@ -22,3 +22,7 @@ Take an array of numbers and print the sums of all values minus the max value an
 <br /><br />
 Test5:<br />
 Select every instance of a particular shape from an 2D int array. Then find the one with the highest sum value. 
+<br />
+<br />
+Test6:<br />
+Shift an array values left n spaces or right n spaces Looping through array assuming it is connected at arr[0] and arr[arr.length-1].
