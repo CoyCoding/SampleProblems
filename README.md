@@ -1,10 +1,15 @@
 # SampleProblems
-These are just a random set problem descriptions and my solutions to them.
+The Interview Prep Kit is a section on HackerRank.com covering algos with many different data structures. I will create Librarys for each type full of static methods. Of course you can also see my progress on the HackerRank site. 
 <br />
 <br />
-Eventually I will have folders for depending on what I feel the test displays skills on. ex. array based, 2d array based, string, int.
-and more index text files for each<br />
+I have dropped Java pretty much all together at this point as I find C# to be a far kinder language. However I will leave my inital Java solutions here as well.<br />
+<br />
 
+
+<br />
+<br />
+<br />
+<br />
 <br />
 Test1:<br />
 Given an array of integers, calculate the fractions of its elements that are positive, negative, and are zeros. Print the decimal value of each fraction on a new line.
