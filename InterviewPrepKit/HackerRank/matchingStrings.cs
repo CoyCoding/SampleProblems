@@ -11,15 +11,14 @@ Example:
 */
     
     
-    
-    
-    
-    
-    
     static int[] matchingStrings(string[] strings, string[] queries) {
+              
+        //create dictionary to search for values in linear time
         Dictionary<string, int> queryDic = new Dictionary<string, int>();
+        //create array for the return count of strings
         var matchedStrings = new int[queries.Length];
 
+        //loop through input and set each word and count;
         foreach(var word in strings)
         {
             if(queryDic.ContainsKey(word))
@@ -30,7 +29,8 @@ Example:
                 queryDic.Add(word, 1);
             }
         }
-
+          
+        //Loop through the query Array and check the Dictonary for values
         for(int i = 0; i < matchedStrings.Length; i++){
             var word = queries[i];
             if(queryDic.ContainsKey(word))
