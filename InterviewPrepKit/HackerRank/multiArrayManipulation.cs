@@ -40,31 +40,34 @@
     }
 
 
+    //This is a quicker Solution.
+    //The question asked for the numbers to be added to the array but it required you do not actually do that to pass.
+
     static long arrayManipulation(int n, int[][] queries) {
-        long[] computation = new long[n];
+    long[] computation = new long[n];
 
-    for (int i = 0; i < queries.Length; i++) {
-      int a = queries[i][0] - 1;
-      int b = queries[i][1];
-      int k = queries[i][2];
+        for (int i = 0; i < queries.Length; i++) {
+            int a = queries[i][0] - 1;
+            int b = queries[i][1];
+            int k = queries[i][2];
 
-      computation[a] += k;
+            computation[a] += k;
 
-      if (b < n) 
-      {
-            computation[b] -= k;
-      }
-    }
+            if (b < n) 
+            {
+                computation[b] -= k;
+            }
+        }
 
-    long max = 0; 
-    long sum = 0;
+        long max = 0; 
+        long sum = 0;
 
-    for (int i = 0; i < n; i++) 
-    {
-      sum += computation[i];
-      max = sum > max ? sum : max;
-    }
+        for (int i = 0; i < n; i++) 
+        {
+            sum += computation[i];
+            max = sum > max ? sum : max;
+        }
 
-    return max;
+        return max;
   
     }
