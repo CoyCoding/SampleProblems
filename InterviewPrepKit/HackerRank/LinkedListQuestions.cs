@@ -250,3 +250,29 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
         }
         return head1;       
     }
+
+/*
+
+                                        Get Node based on distance from tail
+
+*/
+
+
+
+    static int getNode(SinglyLinkedListNode head, int positionFromTail){
+        var targetNode = head;
+        var listIterator = head;
+
+        for(int i= 0; i < positionFromTail; i++)
+        {
+            listIterator = listIterator.next;
+        }
+
+        while(listIterator.next != null)
+        {
+            listIterator = listIterator.next;
+            targetNode = targetNode.next;
+        }
+
+        return targetNode.data; 
+    }
