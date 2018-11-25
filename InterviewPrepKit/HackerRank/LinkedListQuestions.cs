@@ -178,16 +178,11 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
     }
 
 
-/*
+/*   
+
+                                  Insert At Head                                                         
      
-                                  Insert At Head  
-                                  
-                                  
-     
- */
-
-
-
+*/
 
 
      static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
@@ -203,8 +198,29 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
     }
 
 
+/*   
+
+                                  Compare two Linked Lists                                                         
+     
+*/
 
 
+   static bool CompareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        if(head1 == null && head2 == null){
+            return true;
+        }
+
+        if(head1 == null || head2 == null){
+            return false;
+        }
+        
+        if(head1.data == head2.data){
+            return CompareLists(head1.next, head2.next);
+        }else{
+            return false;
+        }
+        
+    }
 
 
 
