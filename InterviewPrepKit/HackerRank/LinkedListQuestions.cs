@@ -276,3 +276,30 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
 
         return targetNode.data; 
     }
+
+
+/*
+
+                    Remove Duplcates from sorted Linked List
+
+*/
+
+
+
+
+
+    static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
+        if(head==null)
+        {
+            return null;
+        } 
+
+        while ( head.next != null && head.data == head.next.data ) 
+        {
+            head.next=head.next.next;
+        }
+
+        removeDuplicates(head.next);
+
+        return head;
+    }
