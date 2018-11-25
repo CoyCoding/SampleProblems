@@ -26,3 +26,29 @@ I just Grouped all the Linked List Questions in one file because they are pretty
         }
 
     }
+
+    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position) {
+            var tempNode = new SinglyLinkedListNode(data);
+            var currentNode = head;
+
+            if(head == null)
+            {
+                return tempNode;
+            }
+            if(position == 0)
+            {
+                tempNode.next = head;
+                return tempNode;
+            }
+
+            for(int i = 0; i < position - 1; i++)
+            {
+                currentNode = currentNode.next;
+            }
+
+            tempNode.next = currentNode.next;
+            currentNode.next = tempNode; 
+
+            
+            return head;
+    }
