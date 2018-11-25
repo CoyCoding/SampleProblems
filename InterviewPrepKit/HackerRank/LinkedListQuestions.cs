@@ -119,3 +119,12 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
      
  */
 
+    static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+        if(position == 0 )
+        {
+            return head.next;
+        }
+        
+        head.next = deleteNode(head.next, position-1);
+        return head;
+    }
