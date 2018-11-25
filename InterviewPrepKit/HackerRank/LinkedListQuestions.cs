@@ -176,3 +176,35 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
 
         return remaining; 
     }
+
+
+/*
+     
+                                  Insert At Head  
+                                  
+                                  
+     
+ */
+
+
+
+
+
+     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
+          var newHead = new SinglyLinkedListNode(data);
+          if (head == null) 
+          {
+          return newHead;
+          }
+          
+          newHead.next = head;
+          return newHead;
+
+    }
+
+
+
+
+
+
+
