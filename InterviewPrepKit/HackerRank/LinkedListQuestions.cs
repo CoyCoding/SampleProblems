@@ -64,3 +64,24 @@ For your reference:
             
             return head;
     }
+
+
+
+static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+        if(position == 0 )
+        {
+            head = head.next;
+            return head;
+        }
+
+        var removalNode = head.next;
+        var parentNode = head;
+
+        for(int i = 1; i < position; i++){
+            parentNode = parentNode.next;
+            removalNode = removalNode.next;
+        }
+
+        parentNode.next = removalNode.next;
+        return head;
+    }
