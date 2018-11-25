@@ -303,3 +303,33 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
 
         return head;
     }
+
+/*
+
+                    Check Linked List for Duplicate Nodes
+
+*/
+
+
+    static bool hasCycle(SinglyLinkedListNode head) {
+        if(head == null)
+        {
+            return false;
+        }
+       var nodeList = new HashSet<SinglyLinkedListNode>();
+
+        while(head != null){
+            if(nodeList.Contains(head))
+            {
+                return true;
+            }else
+            {
+                nodeList.Add(head);
+            }
+            head = head.next;
+        }
+
+
+       return false;
+
+    }
