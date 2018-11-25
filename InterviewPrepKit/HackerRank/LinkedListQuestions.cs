@@ -1,5 +1,17 @@
 /*
 I just Grouped all the Linked List Questions in one file because they are pretty easy.
+
+
+
+
+For your reference:
+     
+    SinglyLinkedListNode 
+    {
+         int data;
+         SinglyLinkedListNode next;
+    }
+   
 */
 
     static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
