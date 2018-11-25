@@ -128,3 +128,27 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
         head.next = deleteNode(head.next, position-1);
         return head;
     }
+
+
+/*
+     
+                                   Reverse Print  
+     
+ */
+
+
+
+    static void reversePrint(SinglyLinkedListNode head) {
+        List<int> printList = new List<int>();
+        var currentNode = head;
+
+        while (currentNode != null)
+        {
+            printList.Add(currentNode.data);
+            currentNode = currentNode.next;
+        }
+        
+        for(int i = printList.Count-1; i >= 0; i--){           
+            Console.WriteLine(printList[i]);
+        }
+    }
