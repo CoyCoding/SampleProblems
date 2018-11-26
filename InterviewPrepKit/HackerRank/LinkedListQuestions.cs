@@ -352,3 +352,27 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
         }
         return head2.data;
     }
+
+/*
+
+                         REVERSE A DOUBLE LINKED LIST
+
+*/
+
+
+    static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
+        var currentNode = head;
+        var newHead  = head;
+        var tempNode = head;
+
+        while(currentNode != null)
+        {
+            tempNode = currentNode.prev;
+            currentNode.prev = currentNode.next;
+            currentNode.next = tempNode;
+            newHead = currentNode;
+            currentNode = currentNode.prev;
+        }
+        
+         return newHead;
+    }   
