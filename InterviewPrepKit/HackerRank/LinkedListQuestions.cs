@@ -333,3 +333,22 @@ static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) 
        return false;
 
     }
+/*
+
+               Find The Data Value of the Merge Node
+
+*/
+
+
+    static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        HashSet<SinglyLinkedListNode> nodeTracker = new HashSet<SinglyLinkedListNode>();
+        while(head1 != null)
+        {
+            nodeTracker.Add(head1);
+            head1 = head1.next;
+        }
+        while(!nodeTracker.Contains(head2)){
+            head2 = head2.next;
+        }
+        return head2.data;
+    }
